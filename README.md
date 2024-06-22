@@ -14,6 +14,13 @@ pnpm dev
 bun dev
 ```
 
+## 해당 프로젝트 목적
+
+- ckeditor 사용
+- react-query 3ver 사용
+- recoil 사용
+- prisma 연동 및 사용
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
