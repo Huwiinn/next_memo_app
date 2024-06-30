@@ -1,7 +1,12 @@
+import React, { useState } from "react";
 import Editor from "ckeditor5-custom-build/build/ckeditor";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 
-const CustomEditor = ({ setData }: any) => {
+const CustomEditor = () => {
+  const [contents, setContents] = useState<string>("");
+
+  console.log("contents : ", contents);
+
   const edrtorConfiguration = {
     toolbar: {
       items: [
@@ -75,9 +80,12 @@ const CustomEditor = ({ setData }: any) => {
     <CKEditor
       editor={Editor}
       config={edrtorConfiguration}
-      data="<p> 반가워요 ~ </p>"
+      // data="<p> 반가워요 ~ </p>"
       onChange={(event, editor) => {
-        setData(editor.getData()); // 에디터 작성 내용 저장
+        // console.log("event : ", event);
+        // console.log("editor : ", editor.getData());
+        setContents(editor.getData());
+        // setData(editor.getData()); // 에디터 작성 내용 저장
       }}
     />
   );
